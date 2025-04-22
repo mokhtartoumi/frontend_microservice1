@@ -16,7 +16,7 @@ const AssignChefToAssistant = () => {
     const fetchData = async () => {
       try {
         // Fetch all users
-        const usersResponse = await axios.get("https://backend-microservice1.onrender.com/users");
+        const usersResponse = await axios.get("https://9jkhdz-3000.csb.app/users");
         const users = usersResponse.data;
 
         // Filter assistants and chefs
@@ -27,7 +27,7 @@ const AssignChefToAssistant = () => {
         setChefs(filteredChefs);
 
         // Fetch globally assigned chefs
-        const assignedChefsResponse = await axios.get("https://backend-microservice1.onrender.com/assigned-chefs");
+        const assignedChefsResponse = await axios.get("https://9jkhdz-3000.csb.app/assigned-chefs");
         setAssignedChefIds(assignedChefsResponse.data.assignedChefIds);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -43,7 +43,7 @@ const AssignChefToAssistant = () => {
     if (selectedAssistant) {
       const fetchAssignedChefsForSelectedAssistant = async () => {
         try {
-          const response = await axios.get(`https://backend-microservice1.onrender.com/users/${selectedAssistant}`);
+          const response = await axios.get(`https://9jkhdz-3000.csb.app/users/${selectedAssistant}`);
           const assistantData = response.data;
           setAssignedChefsForSelectedAssistant(assistantData.chefIds || []);
         } catch (error) {
@@ -65,7 +65,7 @@ const AssignChefToAssistant = () => {
 
     try {
       const response = await axios.put(
-        `https://backend-microservice1.onrender.com/users/assign-chef/${selectedAssistant}`,
+        `https://9jkhdz-3000.csb.app/users/assign-chef/${selectedAssistant}`,
         { chefId: selectedChef }
       );
       alert(response.data.message);
