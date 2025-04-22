@@ -67,7 +67,7 @@ const AdminPage = ({ user, setUser }) => {
 
   const createUser = async () => {
     try {
-      const response = await axios.post("https://backend-microservice1.onrender.com/users", formData, {
+      const response = await axios.post("https://9jkhdz-3000.csb.app/users", formData, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
@@ -82,7 +82,7 @@ const AdminPage = ({ user, setUser }) => {
 
   const getAllUsers = async () => {
     try {
-      const response = await axios.get("https://backend-microservice1.onrender.com/users", {
+      const response = await axios.get("https://9jkhdz-3000.csb.app/users", {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
@@ -100,7 +100,7 @@ const AdminPage = ({ user, setUser }) => {
 
   const getUserById = async (id) => {
     try {
-      const response = await axios.get(`https://backend-microservice1.onrender.com/users/${id}`, {
+      const response = await axios.get(`https://9jkhdz-3000.csb.app/users/${id}`, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
@@ -114,7 +114,7 @@ const AdminPage = ({ user, setUser }) => {
   const updateUser = async (id) => {
     try {
       const response = await axios.put(
-        `https://backend-microservice1.onrender.com/users/${id}`,
+        `https://9jkhdz-3000.csb.app/users/${id}`,
         formData,
         {
           headers: {
@@ -132,7 +132,7 @@ const AdminPage = ({ user, setUser }) => {
 
   const deleteUser = async (id) => {
     try {
-      const response = await axios.delete(`https://backend-microservice1.onrender.com/users/${id}`, {
+      const response = await axios.delete(`https://9jkhdz-3000.csb.app/users/${id}`, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
@@ -148,7 +148,7 @@ const AdminPage = ({ user, setUser }) => {
   const searchUser = async () => {
     try {
       const response = await axios.get(
-        `https://backend-microservice1.onrender.com/users?search=${searchQuery}`,
+        `https://9jkhdz-3000.csb.app/users?search=${searchQuery}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
