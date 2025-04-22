@@ -54,11 +54,11 @@ const AdminDashboard = () => {
       setLoading(true);
 
       // Fetch statistics
-      const statsRes = await axios.get('https://backend-microservice1.onrender.com/problems/stats');
+      const statsRes = await axios.get('https://9jkhdz-3000.csb.app/problems/stats');
       setStats(statsRes.data);
 
       // Fetch users
-      const usersRes = await axios.get('https://backend-microservice1.onrender.com/users');
+      const usersRes = await axios.get('https://9jkhdz-3000.csb.app/users');
       setUsers(usersRes.data);
 
       // Fetch problems
@@ -66,11 +66,11 @@ const AdminDashboard = () => {
       setProblems(problemsRes.data);
 
       // Fetch recent problems
-      const recentRes = await axios.get('https://backend-microservice1.onrender.com/problems/recent');
+      const recentRes = await axios.get('https://9jkhdz-3000.csb.app/problems/recent');
       setRecentProblems(recentRes.data);
 
       // Fetch available technicians
-      const techRes = await axios.get('https://backend-microservice1.onrender.com/techniciens/available');
+      const techRes = await axios.get('https://9jkhdz-3000.csb.app/techniciens/available');
       setAvailableTechnicians(techRes.data);
 
     } catch (error) {
