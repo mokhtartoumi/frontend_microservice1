@@ -30,7 +30,7 @@ const LoginPage = ({ setUser }) => {
 
   const loginUser = async () => {
     try {
-      const response = await axios.post("https://backend-microservice1.onrender.com/login", {
+      const response = await axios.post("https://9jkhdz-3000.csb.app/login", {
         email: formData.email,
         password: formData.password,
       });
@@ -103,7 +103,7 @@ const App = () => {
           const parsedUser = JSON.parse(savedUser);
           
           // Optional: Verify token with backend
-          const response = await axios.get("https://backend-microservice1.onrender.com/users/me", {
+          const response = await axios.get("https://9jkhdz-3000.csb.app/users/me", {
             headers: {
               Authorization: `Bearer ${parsedUser.token}`,
             },
