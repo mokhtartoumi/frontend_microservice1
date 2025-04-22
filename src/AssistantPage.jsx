@@ -23,7 +23,7 @@ const AssistantPage = ({ user }) => {
     try {
       // Fetch assigned chefs using the assistant's UID
       const response = await axios.get(
-        `http://localhost:3000/users/${user.uid}/assigned-chefs`
+        `https://backend-microservice1.onrender.com/users/${user.uid}/assigned-chefs`
 
       );
       setAssignedChefs(response.data);
