@@ -17,7 +17,7 @@ const LoginPage = ({ setUser }) => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:3000/login", formData);
+      const response = await axios.post("https://backend-microservice1.onrender.com/login", formData);
       
       localStorage.setItem("token", response.data.token);
       setUser(response.data.user);
