@@ -12,7 +12,7 @@ const UserUpdate = () => {
   const handleSearch = async () => {
     try {
       const response = await axios.get(
-        `https://backend-microservice1.onrender.com/users?email=${searchQuery}`
+        `https://9jkhdz-3000.csb.app/users?email=${searchQuery}`
       );
       if (response.data.length > 0) {
         const user = response.data[0];
@@ -32,7 +32,7 @@ const UserUpdate = () => {
     if (searchResult) {
       try {
         const response = await axios.put(
-          `https://backend-microservice1.onrender.com/users/${searchResult.id}`,
+          `https://9jkhdz-3000.csb.app/users/${searchResult.id}`,
           { [field]: updatedValue }
         );
         alert("User updated successfully: " + response.data.message);
