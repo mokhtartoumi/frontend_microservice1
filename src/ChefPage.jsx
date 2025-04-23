@@ -16,12 +16,12 @@ const ChefPage = ({ user, setUser }) => {
   // Navigation functions - now opening in new tab
   const navigateToCreateProblem = () => {
     const chefId = user?.id || "unknown";
-    window.open(`http://localhost:5174/reportproblem?chefId=${chefId}`, '_blank');
+    window.open(`https://frontend-microservice2.vercel.app/reportproblem?chefId=${chefId}`, '_blank');
   };
 
   const navigateToProblemStatus = () => {
     const chefId = user?.id || "unknown";
-    window.open(`http://localhost:5174/problemlist?chefId=${chefId}`, '_blank');
+    window.open(`https://frontend-microservice2.vercel.app/problemlist?chefId=${chefId}`, '_blank');
   };
 
   return (
