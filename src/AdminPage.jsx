@@ -189,7 +189,7 @@ const AdminPage = ({ user, setUser }) => {
         <button onClick={() => setActiveMenu("createUser")}>Create User</button>
         <button onClick={() => setActiveMenu("updateUser")}>Update User</button>
         <button onClick={() => setActiveMenu("deleteUser")}>Delete User</button>
-        <button onClick={() => window.open("http://localhost:5174/predefined", "_blank")}> Create Problem </button>
+        <button onClick={() => window.open("https://frontend-microservice2.vercel.app/predefined", "_blank")}> Create Problem </button>
 
         
         <button onClick={() => setActiveMenu("assignChefToAssistant")}>
